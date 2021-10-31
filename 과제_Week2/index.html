@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제_Week2</title>
+</head>
+<body>
+    <!-- 1. 적절하게 아티클 표현하기 -->
+    <article>
+        <h1>예제 1</h1>
+        <section>
+            <ul>
+                <li><a href="#title1">美 게임 시장, 11월 이용자 지출 7조6천억...</a></li>
+                <li><a href="#title2">LG화학, 中서 재생에너지 전력 직접 사들인다</a></li>
+            </ul>
+            <hr/>
+            <div>
+            <h2 id="title1">美 게임 시장, 11월 이용자 지출 7조6천억...역대 최고 기록</h2>
+                <p><b>김철수 기자</b> | 입력: 2020/12/13 11:42 | <b>산업일반</b></p>
+                미국 11월 게임시장 이용자 지출이 역대 최고액인 70억 달러(약 7조6천400억 원)을 기록했다고 영국
+                게임산업 매체<br/> 게임인더스트리가 11일(현지시간) 보도했다.<br/>
+                <p>미국 시장조사 기업 NPD의 보고서를 인용한 보도에 따르면 지난 11월 미국 게임 시장의 하드웨어, 콘
+                텐츠, 주변기기에<br/> 대한 이용자 지출은 전년 동기대비 35% 증가했다.</p>
+            </div>
+            <div>
+                <h2 id="title2">LG화학, 中서 재생에너지 전력 직접 사들인다</h2>
+                <p><b>박영민 기자</b> | 입력: 2020/12/13 11:38 | <b>산업일반</b></p>
+                <p>LG화학이 '2050년 탄소중립' 실현을 위해 글로벌 사업장에 '착한 전기'인 재생에너지를 적극 도입한다.</p>
+                <p>LG화학은 중국 장쑤성 우시 양극재공장이 현지 풍력·태양광 전력판매사인 '윤풍신에너지'로부터 연간
+                140기가와트시(GWh)<br/> 규모의 재생에너지를 수급하는 계약을 체결했다고 13일 밝혔다.</p>
+            </div>
+            <p><a href="#">지디넷코리아</a></p>
+        </section>
+    </article>
+    <!-- 2. 이미지 설명하기 -->
+    <article>
+        <figure>
+            <h2>고양이</h2>
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTEwMjJfMjYx%2FMDAxNjM0ODkzNjAxMzUx.U3t1-WYT7Qaje-T58N15VIdp6MVLOvMgruKK3ero3W0g.Ay9VCQeY6TbNFu457WucYwr_iVDTlPf6D9omtjPxZCkg.JPEG.juns0806%2F%25BE%25C6%25B1%25E2%25B0%25ED%25BE%25E7%25C0%25CC%25C3%25A5%25C0%25D3%25BA%25D0%25BE%25E75.jpg&type=sc960_832" alt="고양이">
+            <figcaption>고양잇과의 하나. 원래 아프리카의 리비아살쾡이를 길들인 것으로, 턱과 송곳니가 특히 발달해서 육식을 주로 한다.<br/> 발톱은 자유롭게 감추거나 드러낼 수 있으며, 눈은 어두운 곳에서도 잘 볼 수 있다. 애완동물로도 육종하여 여러 품종이 있다.</figcaption>
+        </figure>
+    </article>
+
+    <!-- 3. canvas 활용 -->
+    <canvas id="canvas" width="200" height="150"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'rgb(200, 0, 0)';
+        ctx.fillRect(10, 10, 50, 50);
+        ctx.fillStyle = 'rgb(0, 0, 200, 0.5)';
+        ctx.fillRect(30, 30, 50, 50);
+    </script>
+
+    <!-- 4. Iframe 활용 -->
+    <div>
+        <iframe src="https://www.youtube.com/embed/zBp390Xtb8Y" width="500" height="300" name="YOUTUBE"></iframe>
+    </div>
+
+    <!-- 5. table 만들기 -->
+    <table>
+        <caption>Fruits</caption>
+        <colgroup span="2" style="background-color: yellowgreen;"></colgroup>
+        <colgroup span="2" style="background-color: tomato;"></colgroup>
+        <thead>
+            <tr>
+                <th abbr="ID" rowspan="2" id="th__id">ID</th>
+                <th abbr="Name"  rowspan="2" id="th__name">Name</th>
+                <th abbr="Price" colspan="2" id="th__price">Price</th>
+            </tr>
+            <tr>
+                <th headers="th__price">&#92;</th>
+                <th headers="th__price">$</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td headers="th__id">F123A</td>
+                <td headers="th__name">Apple</td>
+                <td headers="th__price">25000</td>
+                <td headers="th__price">22</td>
+            </tr>
+            <tr>
+                <td headers="th__id">F098B</td>
+                <td headers="th__name">Banana</td>
+                <td headers="th__price">22000</td>
+                <td headers="th__price">19</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- 6. form 만들기 -->
+    <fieldset>
+        <legend>회원가입</legend>
+        <div>
+            <label for="id">아이디</label>
+            <input type="text" id="id">
+        </div>
+        <div>
+            <label for="pass">비밀번호</label>
+            <input type="password" id="pass">
+        </div>
+    </fieldset>
+</body>
+</html>
