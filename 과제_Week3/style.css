@@ -1,0 +1,115 @@
+/* 예제1 */
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: 0.5s;
+}
+
+.box1:hover {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+}
+
+/* 예제2 */
+.container2 {
+    width: 800px;
+    height: 500px;
+    border: 1px solid;
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    margin-left: 75%;
+    margin-top: 75%;
+}
+
+/* 예제3 */
+
+.container3 {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.box3 {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+}
+
+/* 예제4 */
+
+.colors {
+    list-style: none;
+}
+
+.colors li:first-child::after {
+    content: " panther";
+    color: pink;
+}
+
+.colors li:nth-child(3) {
+    color: green;
+}
+
+/* 예제5 */
+
+.container5 {
+    list-style: none;
+}
+
+.container5 li:nth-child(1) {
+    font-weight: 700;
+}
+
+.container5 li:nth-child(2) {
+    text-decoration: line-through;
+}
+
+.container5 li:nth-child(3) {
+    text-indent: 100px;
+}
+
+.container5 li:nth-child(4) {
+    letter-spacing: 5px;
+}
+
+.container5 li:nth-child(5) {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+/* 예제6 */
+
+.box6__1 {
+    width: 300px;
+    height: 300px;
+    border: 5px dashed blue;
+}
+
+.box6__2 {
+    width: 300px;
+    height: 300px;
+    border: 3px dotted orange;
+}
+
+/* 예제7 */
+
+.container7 {
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+    overflow: auto;
+}
+
+.box7 {
+    width: 200px;
+    height: 400px;
+    background-color: green;
+}
