@@ -1,0 +1,153 @@
+/* 수정 금지 */
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    line-height: normal;
+    color: black;
+}
+
+.main {
+    box-sizing: border-box;
+    width: 980px;
+    padding: 20px;
+    margin: 0 auto;
+    background: lightgray;
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 2rem;
+}
+
+section {
+    width: 100%;
+    margin: 20px 0;
+    background: lightsteelblue;
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: blue;
+}
+
+/* 코드는 이 곳에서부터 작성합니다. */
+/* 미리 제공된 CSS 선택자 외에 추가로 필요한 선택자가 있을 경우 추가하셔도됩니다. */
+
+/* 문제 1 */
+.news-link {
+    display: inline-block;
+    width: 50%;
+    margin-top: 10px;
+    padding: 10px;
+    background: teal;
+    color: inherit;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.news-item {
+    background: yellowgreen;
+    height: 100px;
+    padding-left: 130px;
+    position: relative;
+}
+
+.news-item-heading {
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.news-item-brief {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.news-item-thumbnail {
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+}
+
+/* 문제 2 */
+.float-container {
+    width: 100%;
+    list-style: none;
+    display: block;
+    padding: 0;
+}
+
+.float-container::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.float-item {
+    width: 50%;
+    float: left;
+}
+
+.news-link2 {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 문제 3 */
+.flex-container {
+    background: yellowgreen;
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    justify-content: center;
+    align-content: center;
+}
+
+.flex-item {
+    background: tomato;
+    border: 2px dashed red;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 문제 4 */
+.smile-face {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background: url("imgs/smile.jpg") no-repeat center/cover;
+    animation: move 2s 1s linear infinite alternate;
+    border-radius: 50%;
+}
+
+.smile-face:hover {
+    animation-play-state: paused;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(400px) rotate(360deg);
+    }
+}
