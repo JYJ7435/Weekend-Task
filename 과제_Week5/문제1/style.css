@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+.container {
+    width: 500px;
+    background-color: #dfdfdf;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    background-color: pink;
+    width: 100%;
+}
+
+.nav {
+    background-color: yellow;
+    width: 100%;
+}
+
+.nave__header {
+    margin: 0;
+}
+
+.nav__content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+}
+
+.nav__menu {
+    background-color: orange;
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+.sign {
+    width: 100%;
+}
+
+.sign form {
+    width: 100%;
+    height: 100px;
+}
+
+.sign form fieldset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.sign form fieldset div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+    height: 30px;
+}
+
+.sign form fieldset div:nth-child(2) {
+    margin-right: 10px;
+}
+
+.sign form fieldset div input {
+    width: 65%;
+}
+
+
+/* 추가 CSS 코드 작성 */
+
+.main,
+.aside {
+    height: 300px;
+}
+
+.main {
+    background-color: lightGreen;
+    width: 350px;
+    padding: 10px;
+    display: flex;
+}
+
+section {
+    width: 50%;
+}
+
+.section1 {
+    background-color: green;
+}
+
+.section2 {
+    background-color: khaki;
+}
+
+.aside {
+    background-color: coral;
+    width: 150px;
+}
+
+.footer {
+    background-color: lightGrey;
+    width: 100%;
+    height: 50px;
+}

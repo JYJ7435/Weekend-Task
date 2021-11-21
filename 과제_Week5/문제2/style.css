@@ -1,0 +1,43 @@
+.container {
+    width: 400px;
+    /* 코드 작성 */
+    position: relative;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    /* 코드 작성 */
+    float: left;
+}
+
+.item:nth-child(1) {
+    background-color: pink;
+    /* 코드 작성 */
+    float: right;
+    width: 50%;
+    height: 200px;
+}
+
+.item:nth-child(2) {
+    background-color: yellow;
+}
+
+.item:nth-child(3) {
+    background-color: lightGreen;
+}
+
+.item:nth-child(4) {
+    background-color: skyBlue;
+    /* 코드 작성 */
+    position: absolute;
+    top: 100px;
+}
+
+.item:nth-child(5) {
+    background-color: lightGrey;
+    /* 코드 작성 */
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
