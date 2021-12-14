@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.check-mode {
+    background-color: rgb(162, 199, 201);
+    padding: 20px;
+}
+
+input {
+    cursor: pointer;
+}
+
+.Light,
+.Dark {
+    padding-top: 20px;
+    height: 100vh;
+}
+
+.Light {
+    background-color: #fff;
+    color: #000;
+}
+
+.Dark {
+    background-color: #000;
+    color: #fff;
+}

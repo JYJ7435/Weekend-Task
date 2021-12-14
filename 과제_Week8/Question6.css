@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    list-style: none;
+}
+
+li {
+    background-color: yellow;
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.red {
+    background-color: red;
+}
