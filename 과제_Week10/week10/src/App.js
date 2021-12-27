@@ -6,8 +6,8 @@ import React from "react";
 // import Q5 from "./Q5";
 // import { UsersProvider as Q5Provider } from "./Q5/UsersContext";
 // import Q6 from "./Q6";
-import Q7 from "./Q7";
-// import Q8 from "./Q8";
+// import Q7 from "./Q7";
+import Q8 from "./Q8";
 
 /**
  * Week 10 - 2차 평가
@@ -51,8 +51,8 @@ function App() {
       </Q5Provider> */}
 
       {/* <Q6 /> */}
-      <Q7 />
-      {/* <Q8 /> */}
+      {/* <Q7 /> */}
+      <Q8 />
     </>
   );
 }
