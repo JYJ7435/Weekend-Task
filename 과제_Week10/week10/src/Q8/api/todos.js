@@ -1,19 +1,19 @@
 let todos = [
-  // {
-  //   id: 1,
-  //   text: "redux 공부하기",
-  //   done: false,
-  // },
-  // {
-  //   id: 2,
-  //   text: "redux-thunk 공부하기",
-  //   done: false,
-  // },
-  // {
-  //   id: 3,
-  //   text: "redux-saga 공부하기",
-  //   done: false,
-  // },
+  {
+    id: 1,
+    text: "redux 공부하기",
+    done: false,
+  },
+  {
+    id: 2,
+    text: "redux-thunk 공부하기",
+    done: false,
+  },
+  {
+    id: 3,
+    text: "redux-saga 공부하기",
+    done: false,
+  },
 ];
 let nextId = 4;
 

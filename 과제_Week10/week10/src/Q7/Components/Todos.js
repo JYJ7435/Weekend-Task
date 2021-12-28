@@ -33,6 +33,9 @@ function Todos({ todos, onToggle, onCreate }) {
   const onChange = (e) => setText(e.target.value);
   const onSubmit = (e) => {
     e.preventDefault();
+    const trimmedText = text.trim();
+    if (!trimmedText.length) return;
+
     onCreate(text);
     setText("");
   };

@@ -8,7 +8,6 @@
 // 5.1. "등록" 버튼 클릭 시 input 요소에 작성된 텍스트를 제거한다.
 
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 
 const TodoItem = React.memo(function TodoItem({ todo }) {
   return <li>{todo.text}</li>;
@@ -25,18 +24,26 @@ const TodoList = React.memo(function TodoList({ todos }) {
 });
 // do something
 
-function Todos({ todos, onCreate }) {
-  const { data, loading, error } = useSelector((state) => state.todos);
+function Todos({ todos, onCreate, loading, error }) {
   const [text, setText] = useState("");
   const onChange = (e) => setText(e.target.value);
   const onSubmit = (e) => {
     e.preventDefault();
+    const trimmedText = text.trim();
+    if (!trimmedText.length) return;
+
     onCreate(text);
     setText("");
   };
-  if (loading) return <div>로딩중...</div>;
-  if (error) return <div>에러 발생</div>;
-  if (!data) return <div>할 일을 추가해주세요</div>;
+
+  const altText = loading ? (
+    <div>로딩 중...</div>
+  ) : error ? (
+    <div>에러 발생</div>
+  ) : (
+    <div>할 일을 작성해주세요</div>
+  );
+
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -47,7 +54,7 @@ function Todos({ todos, onCreate }) {
         />
         <button type="submit">등록</button>
       </form>
-      <TodoList todos={todos} />
+      {todos?.length > 0 ? <TodoList todos={todos} /> : altText}
     </div>
   );
 }
