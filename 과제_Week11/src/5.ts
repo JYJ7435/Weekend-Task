@@ -6,7 +6,7 @@
 */
 
 interface SearchFunc {
-  // 코드 작성
+  (source: string, subString: string): boolean;
 }
 
 let mySearch: SearchFunc;

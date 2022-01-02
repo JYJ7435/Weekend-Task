@@ -6,14 +6,24 @@
 console.log(code)의 실행결과를 콘솔에 찍을 것
 */
 
-const korean = "ko";
-const english = "en";
-const japanese = "ja";
-const chinese = "zh";
-const spanish = "es";
+// const korean = "ko";
+// const english = "en";
+// const japanese = "ja";
+// const chinese = "zh";
+// const spanish = "es";
 
-type LanguageCode = "ko" | "en" | "ja" | "zh" | "es";
+// type LanguageCode = "ko" | "en" | "ja" | "zh" | "es";
 
-const code: LanguageCode = korean;
+// const code: LanguageCode = korean;
+
+enum LanguageCode {
+  korean = "ko",
+  english = "en",
+  japanese = "ja",
+  chinese = "zh",
+  spanish = "es",
+}
+
+const code = LanguageCode.korean;
 
 console.log(code); // 'ko'

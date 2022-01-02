@@ -4,7 +4,9 @@ todos 내부의 id, content, completed에 대한 interface를 작성하세요.
 */
 
 interface Todo {
-  // 코드 작성
+  id: number;
+  content: string;
+  completed: boolean;
 }
 
 const todos: Todo[] = [

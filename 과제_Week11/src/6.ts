@@ -4,4 +4,4 @@ MyArray는 문자열로 된 T 타입의 배열입니다.
 */
 
 type MyArray<T> = T[];
-const drinks: MyArray = ["Coffee", "Milk", "Beer"];
+const drinks: MyArray<string> = ["Coffee", "Milk", "Beer"];

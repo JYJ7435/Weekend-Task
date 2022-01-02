@@ -21,11 +21,11 @@ type Employee = TeamLeader | Newcomer;
 function doSomething(employee: Employee) {
   switch (employee.type) {
     case "leader": {
-      // employee는 '' 타입
+      // employee는 'TeamLeader' 타입
       return employee.leadingSince;
     }
     case "newcomer": {
-      // employee는 '' 타입
+      // employee는 'Newcomer' 타입
       return employee.major;
     }
     default: {
