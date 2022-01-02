@@ -6,9 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from './modules';
+import rootReducer, { rootSaga } from './modules';
+import createSagaMiddleware from '@redux-saga/core'
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
   <React.StrictMode>
