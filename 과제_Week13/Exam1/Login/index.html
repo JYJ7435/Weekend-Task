@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <form class="login-form">
+    <div class="login_container">
+      <div class="id_container inputbox">
+        <label for="idbox">아이디</label>
+        <input type="text" id="idbox" autocomplete="username">
+      </div>
+
+      
+      <div class="password_container inputbox">
+        <label for="passwordbox">비밀번호</label>
+        <input type="password" id="passwordbox" autocomplete="off">
+      </div>
+      
+      <span class="message">비밀번호는 영어, 숫자 포함 8자에서 20자입니다</span>
+
+      <button class="login-btn" type="submit" disabled >로그인</button>
+    </div>
+  </form>
+</body>
+</html>
