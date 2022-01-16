@@ -4,17 +4,17 @@ const passwordbox = document.getElementById("passwordbox");
 const message = document.querySelector(".message");
 const loginbtn = document.querySelector(".login-btn");
 
+let reg = /^(?=.*[a-zA-z])(?=.*[0-9]).{8,20}$/;
+
 idbox.addEventListener("input", stateHandler());
 
 passwordbox.addEventListener("input", () => {
-  let reg = /^(?=.*[a-zA-z])(?=.*[0-9]).{8,20}$/.test(passwordbox.value);
-  stateHandler();
-
-  if (!reg) {
+  if (!reg.test(passwordbox.value)) {
     message.style.display = "block";
   } else {
     message.style.display = "none";
   }
+  stateHandler();
 });
 
 loginbtn.addEventListener("click", () => {
@@ -23,11 +23,11 @@ loginbtn.addEventListener("click", () => {
 });
 
 function stateHandler() {
-  if (!(idbox.value && passwordbox.value)) {
-    loginbtn.disabled = true;
-    loginbtn.classList.remove("active");
-  } else {
+  if (idbox.value && passwordbox.value && reg.test(passwordbox.value)) {
     loginbtn.disabled = false;
     loginbtn.classList.add("active");
+  } else {
+    loginbtn.disabled = true;
+    loginbtn.classList.remove("active");
   }
 }
